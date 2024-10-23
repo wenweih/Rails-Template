@@ -38,6 +38,7 @@ gem "stimulus-rails"
 gem "strong_migrations"
 
 gem "importmap-rails"
+gem "tailwindcss-rails"
 
 group :development do
   gem "letter_opener"
