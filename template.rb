@@ -155,11 +155,11 @@ def apply_template! # rubocop:disable Metrics/MethodLength, Metrics/AbcSize, Met
 
     run_with_clean_bundler_env "bin/setup"
 
-    apply "variants/frontend-base/template.rb"
-    apply "variants/frontend-base/sentry/template.rb"
-    apply "variants/frontend-base/js-lint/template.rb"
+    #apply "variants/frontend-base/template.rb"
+    # apply "variants/frontend-base/sentry/template.rb"
+    #apply "variants/frontend-base/js-lint/template.rb"
 
-    apply "variants/frontend-stimulus/template.rb"
+    #apply "variants/frontend-stimulus/template.rb"
     apply "variants/frontend-bootstrap/template.rb" if TEMPLATE_CONFIG.apply_variant_bootstrap?
     apply "variants/frontend-react/template.rb" if TEMPLATE_CONFIG.apply_variant_react?
 
@@ -179,7 +179,7 @@ def apply_template! # rubocop:disable Metrics/MethodLength, Metrics/AbcSize, Met
     create_initial_migration
 
     # Apply variants after setup and initial install, but before commit
-    apply "variants/accessibility/template.rb"
+    # apply "variants/accessibility/template.rb"
     # The accessibility template brings in the lighthouse and
     # lighthouse matcher parts we need to run performance specs
     apply "variants/performance/template.rb"
