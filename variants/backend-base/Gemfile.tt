@@ -37,6 +37,8 @@ gem "stimulus-rails"
 # Protect against accidentally slow migrations
 gem "strong_migrations"
 
+gem "importmap-rails"
+
 group :development do
   gem "letter_opener"
 

@@ -3,7 +3,7 @@ copy_file "variants/backend-base/app/controllers/home_controller.rb", "app/contr
 copy_file "variants/backend-base/app/controllers/active_storage/base_controller.rb", "app/controllers/active_storage/base_controller.rb"
 
 # Configure app/views
-template "variants/backend-base/app/views/layouts/application.html.erb", "app/views/layouts/application.html.erb", force: true
+# template "variants/backend-base/app/views/layouts/application.html.erb", "app/views/layouts/application.html.erb", force: true
 directory "variants/backend-base/app/views/application", "app/views/application"
 copy_file "variants/backend-base/app/views/home/index.html.erb", "app/views/home/index.html.erb"
 

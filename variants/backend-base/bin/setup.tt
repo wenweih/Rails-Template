@@ -11,6 +11,8 @@ def setup!
     test_local_env_contains_required_keys
     run  "bin/rake tmp:create"
     run  "bin/rake db:prepare"
+    run "bin/rails importmap:install"
+    run "bin/rails tailwindcss:install"
   end
 end
 
