@@ -12,7 +12,7 @@ def setup!
     run  "bin/rake tmp:create"
     run  "bin/rake db:prepare"
     run "bin/rails importmap:install"
-    run "bin/rails tailwindcss:install"
+    # run "bin/rails tailwindcss:install"
   end
 end
 
