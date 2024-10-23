@@ -3,11 +3,12 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  host: localhost
   # For details on connection pooling, see Rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%%= ENV["DB_POOL_SIZE"] || ENV["RAILS_MAX_THREADS"] || 5 %>
   min_messages: WARNING # https://thoughtbot.com/blog/global-min-messages
+  host: localhost
+  username: postgres
 
 development:
   <<: *default
