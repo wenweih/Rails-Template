@@ -13,6 +13,8 @@ def setup!
     run  "bin/rake db:prepare"
     run "bin/rails importmap:install"
     run "bin/rails tailwindcss:install"
+    run "bin/rails turbo:install"
+    run "bin/rails stimulus:install"
   end
 end
 
