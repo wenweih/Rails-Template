@@ -224,9 +224,6 @@ def apply_template! # rubocop:disable Metrics/MethodLength, Metrics/AbcSize, Met
     # Run the README template at the end because it introspects the app to
     # discover rake tasks etc.
     apply_readme_template
-
-    # Run prettier one last time to ensure that everything is formatted
-    apply_prettier_all_over
   end
 end
 
