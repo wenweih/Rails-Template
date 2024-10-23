@@ -155,26 +155,8 @@ def apply_template! # rubocop:disable Metrics/MethodLength, Metrics/AbcSize, Met
 
     run_with_clean_bundler_env "bin/setup"
 
-    #apply "variants/frontend-base/template.rb"
-    # apply "variants/frontend-base/sentry/template.rb"
-    #apply "variants/frontend-base/js-lint/template.rb"
-
-    #apply "variants/frontend-stimulus/template.rb"
-    apply "variants/frontend-bootstrap/template.rb" if TEMPLATE_CONFIG.apply_variant_bootstrap?
-    apply "variants/frontend-react/template.rb" if TEMPLATE_CONFIG.apply_variant_react?
-
-    if TEMPLATE_CONFIG.use_typescript?
-      apply "variants/frontend-base-typescript/template.rb"
-
-      apply "variants/frontend-stimulus-typescript/template.rb"
-      apply "variants/frontend-bootstrap-typescript/template.rb" if TEMPLATE_CONFIG.apply_variant_bootstrap?
-      apply "variants/frontend-react-typescript/template.rb" if TEMPLATE_CONFIG.apply_variant_react?
-
-      package_json.manager.run!("typecheck")
-    end
-
     # apply any js linting fixes after all frontend variants have run
-    package_json.manager.run!("js-lint-fix")
+    # package_json.manager.run!("js-lint-fix")
 
     create_initial_migration
 
